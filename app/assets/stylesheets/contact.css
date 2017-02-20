@@ -1,0 +1,33 @@
+.contact-image img
+{
+	width: 100%;
+	height: auto;
+	/*border: 1px solid #c5c0c0;*/
+}
+.contact-form
+{
+	border: 1px solid #c5c0c0;
+	background-color: #016b61;
+	padding: 10px;
+	/*border-radius: 15px;*/
+	color: #fff;
+
+}
+.contact-form h3
+{
+
+	color: #fff;
+
+}
+.contact-bottom
+{
+	background: #d43604;
+	padding: 10px;
+	color: #fff;
+	border-bottom: 4px solid #f3f3f3;
+}
+.contact-bottom h3, p,h5
+{
+	text-align: center;
+	color: #fff;
+}

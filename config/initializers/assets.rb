@@ -1,0 +1,46 @@
+# Be sure to restart your server when you modify this file.
+
+# Version of your assets, change this if you want to expire all your assets.
+Rails.application.config.assets.version = '1.0'
+
+# Add additional assets to the asset load path
+# Rails.application.config.assets.paths << Emoji.images_path
+
+# Precompile additional assets.
+# application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
+# Rails.application.config.assets.precompile += %w( search.js )
+Rails.application.config.assets.precompile += %w( bootstrap.css )
+Rails.application.config.assets.precompile += %w( bootstrap.min.css )
+Rails.application.config.assets.precompile += %w( custom.css )
+Rails.application.config.assets.precompile += %w( jquery.littlelightbox.css )
+Rails.application.config.assets.precompile += %w( light-carousel.css )
+Rails.application.config.assets.precompile += %w( main.css )
+Rails.application.config.assets.precompile += %w( normalize.css )
+Rails.application.config.assets.precompile += %w( owl.carousel.css )
+Rails.application.config.assets.precompile += %w( owl.theme.css )
+Rails.application.config.assets.precompile += %w( pagination.css )
+Rails.application.config.assets.precompile += %w( slitstyle.css )
+Rails.application.config.assets.precompile += %w( style.css )
+
+Rails.application.config.assets.precompile += %w( stylesheet.css )
+Rails.application.config.assets.precompile += %w( thumbnail.css )
+Rails.application.config.assets.precompile += %w( toastr.css )
+Rails.application.config.assets.precompile += %w( bootstrap.js )
+Rails.application.config.assets.precompile += %w( bootstrap.min.js )
+Rails.application.config.assets.precompile += %w( gnmenu.js )
+Rails.application.config.assets.precompile += %w( jquery-1.8.2.min.js )
+Rails.application.config.assets.precompile += %w( jquery.ba-cond.min.js )
+Rails.application.config.assets.precompile += %w( jquery.backstretch.min.js )
+Rails.application.config.assets.precompile += %w( jquery.light-carousel.js )
+Rails.application.config.assets.precompile += %w( jquery.littlelightbox.js )
+Rails.application.config.assets.precompile += %w( jquery.slitslider.js )
+Rails.application.config.assets.precompile += %w( jquery_code_thumbs.js )
+Rails.application.config.assets.precompile += %w( jssor.slider-22.0.6.debug.js )
+Rails.application.config.assets.precompile += %w( jssor.slider-22.0.6.min.js )
+Rails.application.config.assets.precompile += %w( jssor.slider-22.0.6.mini.js )
+Rails.application.config.assets.precompile += %w( lightslider.js )
+Rails.application.config.assets.precompile += %w( modernizr.custom.79639.js )
+Rails.application.config.assets.precompile += %w( owl.carousel.js )
+Rails.application.config.assets.precompile += %w( script.js )
+Rails.application.config.assets.precompile += %w( scripts.js )
+Rails.application.config.assets.precompile += %w( toastr.js )

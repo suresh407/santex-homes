@@ -1,0 +1,118 @@
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<%= stylesheet_link_tag    'light-carousel', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag    'jquery.littlelightbox', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<style type="text/css">
+  .slider-image
+  {
+    width: 100%;
+    height: 200px;
+  }
+  .sample1
+  {
+    background: #272626;
+  }
+  .border-box
+  {
+    background: #eee;
+    border: 1px solid #999;
+    padding: 10px;
+  }
+  .tab-content,.tabs-row
+  {
+    margin-top: 30px;
+  }
+  .show-area
+  {
+    margin-bottom: 40px;
+  }
+</style>
+<div class="container show-area">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="home-heading"><%= @home.name %></div>
+      <div>
+        <ul class="show-list">
+          <li><%= @home.sft %>Sq.Ft</li>
+          <li><%= @home.no_of_bedrooms %> Beds</li>
+          <li><%= @home.no_of_bathrooms %> Baths</li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">  
+    <div class="col-md-8">
+      <div class="sample1 top-height">
+        <div class="carousel" style="height: 100%;">
+          <ul>
+            <% if @home_photos %>
+            <% @home_photos.each do |home_photo| %>
+           
+            <li> <%= image_tag home_photo.image.url, class: "slider-image" %> </li>
+            <% end %>
+            <% end %>
+          </ul>
+          <div class="controls">
+            <div class="prev"></div>
+            <div class="next"></div>
+          </div>
+        </div>
+        <div class="thumbnails">
+          <ul>
+           <% if @home_photos %>
+            <% @home_photos.each do |home_photo| %>
+            <li> <%= image_tag home_photo.image.url, class: "img-responsive" %> </li>
+            <% end %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+     <%= render 'enquery' %>
+  <div class="row tabs-row">
+    <div class="col-md-12">
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Description</a></li>
+        <li><a data-toggle="tab" href="#menu1">Feautures</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+          <h4>Home feauture include:</h4>
+          <p><%= @home.description %></p>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+          <h3>Feautures</h3>
+          <p><b>Home Type: </b><%= @home.home_type %></p>
+          <p><b>No.of Baths: </b><%= @home.no_of_bathrooms %></p>
+          <% if @home.building_method.present? %>
+            <p><b>Method: </b><%= @home.building_method %></p>
+          <% else %>
+            <p><b>Method: </b>Not Mentioned</p>
+          <% end %>
+          <% if @home.series.present? %>
+            <p><b>Series: </b><%= @home.series %></p>
+          <% else %>
+            <p><b>Series: </b>Not mentioned</p>
+          <% end %>
+          <p><b>Square.ft: </b><%= @home.sft %></p>
+          <p><b>No.of Beds: </b><%= @home.no_of_bedrooms %></p>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+          <h3>Menu 2</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+        </div>
+        <div id="menu3" class="tab-pane fade">
+          <h3>Menu 3</h3>
+          <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>  
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<%= javascript_include_tag 'jquery.littlelightbox', 'data-turbolinks-track': 'reload' %>
+
+<script>
+$('.lightbox').littleLightBox();
+</script>

@@ -1,0 +1,92 @@
+
+<%= stylesheet_link_tag    'pagination', media: 'all', 'data-turbolinks-track': 'reload' %>
+<div style="margin-top:25px; margin-bottom:150px;">
+	<div class="container">
+		<div class="ro">
+			<div class="col-md-12">
+				<div class="title-info wow fadeInUp animated" data-wow-delay=".5s">
+				<h3 class="title">Our<span>Homes</span></h3>
+				<hr>
+			</div>
+			
+		</div>
+		<div class="row">
+			<!--div class="col-md-2">
+				<ul class="sidebar-list">
+					<li class="sidebar-item"><!--%= link_to "Homes", homes_path, class:"sidebar-link active"%></li>
+					
+					
+				</ul>
+			</div-->
+			<div class="col-md-12">
+				<div class="panel panel-default" style="border: none;">
+					<div class="panel-head-area">
+						Homes(<%= @homes.length %>)
+					</div>
+					<div class="panel-body" style="border: none;">
+						<% @homes.each do |home| %>
+							<%= link_to home do %>
+							<div class="row homes-row">
+								<div class="col-md-12">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="homes-panel">
+												<p><i class="fa fa-play" aria-hidden="true"></i><%= home.name %></p>
+												<p>	
+													
+													<ul class="menus">
+														<li style="list-style: none;"><%= home.sft %>Sq.ft</li>
+														<li><%= home.no_of_bedrooms %>Beds</li>
+														<li><%= home.no_of_bathrooms %>Baths</li>
+													</ul>
+												
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4">
+											<div class="exterior">
+												<%= image_tag home.home_photos[0].image.url if home.home_photos.length > 0 %>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="floor-plan">
+												<%= image_tag home.home_photos[1].image.url if home.home_photos.length > 0 %>
+											</div>
+										</div>
+										<div class="col-md-3 col-md-offset-1">
+											<div class="buttons">
+												<div class="photos">
+													<button class=" icon-btn  btn-area" href="#"><span class="fa fa-picture-o btn-glyphicon img-circle text-muted"></span>Photos</button>
+												</div>
+												<div class="floor-plan-button">
+													<button class=" icon-btn  btn-area" href="#"><span class="fa fa-map btn-glyphicon img-circle text-muted"></span>Floor Plan</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<% end %>
+						<% end %>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row pagination-area">
+			<div class="col-md-12">
+				<div class="digg_pagination">
+				    <div class="page_info">
+				      <%= page_entries_info @homes %>
+				    </div>
+			    		<%= will_paginate @homes, :container => false %>
+			  	</div>
+			</div>
+		</div>	
+			</div>
+		</div>
+	</div>
+</div>

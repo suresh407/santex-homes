@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Santex</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= custom_bootstrap_flash %>
+    <%= stylesheet_link_tag    'bootstrap', media: 'all', 'data-turbolinks-track': 'reload' %>
+   	<%= stylesheet_link_tag    'slitstyle', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <%= stylesheet_link_tag    'toastr', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'bootstrap', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'script', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <%= stylesheet_link_tag    'thumbnail', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
+    <!-- Owl stylesheet -->
+    <%= stylesheet_link_tag    'owl.carousel', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'owl.theme', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'owl.carousel', 'data-turbolinks-track': 'reload' %>
+    <!-- Owl stylesheet -->
+    <link href="https://fonts.googleapis.com/css?family=Days+One|News+Cycle|Sintony|Ubuntu" rel="stylesheet"> 
+    <!-- slitslider -->
+    <%= stylesheet_link_tag    'style', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'custom', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'modernizr.custom.79639', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'jquery.ba-cond.min', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'jquery.slitslider', 'data-turbolinks-track': 'reload' %>
+    
+    <!-- slitslider -->
+    <style>
+  .caret-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid rgba(0, 0, 0, 0);
+    border-right: 4px solid rgba(0, 0, 0, 0);
+    border-bottom: 4px solid;
+    
+    display: inline-block;
+    margin-left: 2px;
+    vertical-align: middle;
+
+}
+h2 a, blockquote{
+  color: #000;
+}
+.affix {
+      top: 0;
+      width: 100%;
+  }
+
+  .affix + .container-fluid {
+      padding-top: 0px;
+  }
+ 
+  .navbar-nav {
+    width: 100%;
+    text-align: center;
+    > li {
+      float: none;
+      display: inline-block;
+    }
+  }
+  
+</style>  
+  </head>
+
+  <body>
+  	<%= render 'shared/navbar' %>
+          <%= render 'shared/message' %>
+
+  	<div>
+    <%= yield %>
+    </div>
+    <%= render 'shared/footer' %>
+    
+    <script>
+      $(document).ready(function(){
+    $('.carousel').carousel({
+        pause: true,
+        interval: false
+    });
+    });
+
+
+
+
+    $(document).ready(function(){
+    $(".col-md-3 ").mouseenter(function(){
+        $(this).find(".col-img-responsive02").show(200);
+    }); 
+
+
+    $(".col-md-3").mouseleave(function(){
+        $(this).find(".col-img-responsive02").hide();
+    }); 
+    }); 
+    </script>
+  </body>
+</html>

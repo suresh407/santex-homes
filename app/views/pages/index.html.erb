@@ -1,0 +1,166 @@
+
+<div class="">
+    <div id="slider" class="sl-slider-wrapper">
+        <div class="sl-slider">
+            <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+                <div class="sl-slide-inner">
+                    <div class="bg-img bg-img-1"></div>
+                    <!--div class="slider-image">
+                        <img src="/assets/slider.jpg" class="img-responsive"> 
+                    </div-->
+                </div>
+            </div>    
+                        
+            <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+                <div class="sl-slide-inner">
+                    <div class="bg-img bg-img-3"></div>
+                    <!--div class="slider-image">
+                        <img src="/assets/slider.jpg" class="img-responsive"> 
+                    </div-->
+                </div>
+            </div>
+            <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="-5" data-slice2-rotation="25" data-slice1-scale="2" data-slice2-scale="1">
+                <div class="sl-slide-inner">
+                    <div class="bg-img bg-img-4"></div>
+                    <!--div class="slider-image">
+                        <img src="/assets/slider.jpg" class="img-responsive"> 
+                    </div-->
+                </div>
+            </div>
+            <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1">
+                <div class="sl-slide-inner">
+                    <div class="bg-img bg-img-5"></div>
+                    <!--div class="slider-image">
+                        <img src="/assets/slider.jpg" class="img-responsive"> 
+                    </div-->
+                </div>
+            </div>
+        </div><!-- /sl-slider -->
+            <nav id="nav-dots" class="nav-dots">
+                <span class="nav-dot-current"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </nav>
+    </div>
+</div>
+<!-- carousel -->
+<div class="container spacer row-spacer">
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                <div class=""></div>
+                    <img src="/assets/1.jpg"  />
+                </div>
+                <div class="panel-body">
+                    <p class="home-head home-content"><i class="fa fa-home" aria-hidden="true"></i>Single Homes Starting at</p>
+                    <h4>$25,900</h4>
+                    <!--a class="btn btn-primary" href="#">Learn More <i class="fa fa-chevron-right"></i></a-->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <div class=""></div>
+                      	<img src="/assets/2.jpg"  />
+                </div>
+                <div class="panel-body">
+                    <p class="home-head home-content"><i class="fa fa-home" aria-hidden="true"></i>Double Homes Starting at</p>
+                    <h4>$44,900</h4>
+                    <!--a class="btn btn-primary" href="#">Learn More <i class="fa fa-chevron-right"></i></a-->
+                </div>
+           	</div>
+        </div>
+       	<div class="col-md-3 col-sm-6">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <div class=""></div>
+                       	<img src="/assets/3.jpg"  />
+                </div>
+                <div class="panel-body">
+                    <p class="home-head home-content"><i class="fa fa-home" aria-hidden="true"></i>Homes Starting at</p>
+                    <h4>$49,995</h4>
+                    <!--a class="btn btn-primary" href="#">Learn More <i class="fa fa-chevron-right"></i></a-->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <div class=""></div>
+                       	<img src="/assets/4.jpg"  />
+                </div>
+                <div class="panel-body">
+                    <p class="home-head home-content"><i class="fa fa-home" aria-hidden="true"></i>Homes Starting at</p>
+                    <h4>$59,900 </h4>
+                </div>
+            </div>
+        </div>
+     </div>
+
+    <div id="products" class="row list-group row-spacer">
+        <div class="col-md-12 text-center">
+            <h3>Our New Homes</h3>
+            <hr>
+        </div>
+        <% @homes.each do |home| %>
+        <div class="item  col-md-3 col-sm-6">
+            <div class="thumbnail">
+                <%= link_to home do %>
+                    <div>
+                        <div class="home-image">
+                            <%= image_tag home.home_photos[0].image.url if home.home_photos.length > 0 %>
+                        </div>    
+                        <div class="caption">
+                            <h4 class="home-text list-group-item-heading">
+                                <i class="fa fa-home" aria-hidden="true"></i> <%= home.name %></h4>
+                            
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="lead">
+                                        <i class="fa fa-bed" aria-hidden="true"></i> <%= home.no_of_bedrooms %> Beds</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>    
+                <% end %>        
+                </div>
+            </div>
+        <% end %>
+    </div>
+        
+<!-- carousel end -->
+
+
+    <div class="divider"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel-body mat-info">
+                <p>We will do what it takes to earn your business Been shopping? Found something you like? Bring it to SanTex and let us build it and save you time and money.</p>
+            </div>
+        </div>
+    </div>
+    <div class="spacer">
+        <div class="row">
+            <div class="col-md-12 col-md-offset-0 recent-view">
+                <h3 style="border-bottom: 1px solid #4e4545;">About Us</h3>
+                <p>The drive and desire to not just sell a product but to sell the best product in the industry along with giving our customers the best service before and after the sale<br><%= link_to "Learn More....", pages_about_us_path %></a></p>
+            </div>
+            
+        </div>
+    </div>
+     <div class="row">
+        <div class="col-md-12">
+            <div class="img">
+                <center><a href="http://www.tdhca.state.tx.us"><img src="/assets/linked.gif" class="img-responsive"></a> </center>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
