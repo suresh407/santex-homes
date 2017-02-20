@@ -10,8 +10,8 @@ class ContactPagesController < ApplicationController
   @contact_page = ContactPage.new(contact_page_params)
 #   if @contact_page.valid?
  if    @contact_page.save
-   flash[:notice]="details saved successfully"
-  redirect_to contact_pages_path
+   flash[:notice]="we have recieved your details successfully"
+  redirect_to root_path
   else
    
    if @contact_page.errors.any?

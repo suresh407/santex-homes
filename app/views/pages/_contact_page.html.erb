@@ -1,0 +1,164 @@
+<link rel="stylesheet" type="text/css" href="/assets/contact.css">
+<div class="container" style="margin-top: 40px;">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 style="text-align: center;">Contact Us</h2>
+      <hr>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="contact-image">
+        <img src="/assets/contact.png" class="img-responsive">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="contact-form">
+        
+        <!-- contact start-->
+          <%= form_for @message, url: contact_path, :method => :post, :html => { :class => 'form-horizontal', multipart: true } do |f| %>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="control-group">
+                  <label> First Name  </label>
+                  <div class="controls">
+                    <%= f.text_field :first_name, :class => 'form-control' %>
+                   
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">  
+                <div class="control-group">
+                  <label> Last Name  </label>
+                  <div class="controls">
+                    <%= f.text_field :last_name, :class => 'form-control' %>
+                    
+
+                  </div>
+                </div>
+              </div>
+            </div>    
+            <div class="row">
+              <div class="col-md-6">
+                <div class="control-group">
+                  <label> Email  </label>
+                  <div class="controls">
+                    <%= f.text_field :email, :class => 'form-control' %>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">    
+                <div class="control-group">
+                  <label> Phone Number  </label>
+                  <div class="controls">
+                    <%= f.text_field :phone, :class => 'form-control' %>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>    
+            <div class="row">
+              <div class="col-md-4">
+              <label>Do You Have Land?  </label>
+                <%= f.select :do_you_have_land, [["Yes I do","yes"], ["No I don't","no"],], {prompt: 'please select'}, {id: 'do_you_have_land', :required => false, class: 'form-control'} %>
+                
+           
+              </div>
+              <div class="col-md-4">
+              <label>Moving Time Frame  </label>   
+                <%= f.select :moving_time_frame, [["0-30 Days","0-30"], ["30-60 Days","30-60"], ["60-90 Days","60-90"], ["90+","90+"] ,], {prompt: 'Select...'},{ id: 'moving_time_frame', :required => false, class: 'form-control'} %>
+             
+               
+              </div>  
+              <div class="col-md-4">
+              <label>Financing  </label>
+                <%= f.select :financing, [["yes","yes"], ["No,I'm paying cash ","no"],], {prompt: 'Select...'},{ id: 'financing', :required => false, class: 'form-control'} %>
+               
+              </div>
+            </div>    
+            
+            <div class="row">
+              <div class="col-md-8">
+                <div class="control-group">
+                  <label>Town Planning to Build In  </label>
+                  <div class="controls">
+                    <%= f.text_field :town_planning_to_build, :class => 'form-control' %>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label> State  </label>
+                  <%= f.select :state, [["Alabama","Alabama"], ["Alaska","Alaska"], ["Arizona","Arizona"], ["Arkansas","Arkansas"], ["California","California"],
+                  ["Colorado","Colorado"], ["Connecticut","Connecticut"], ["Delaware","Delaware"], ["Florida","Florida"], ["Georgia","Georgia"],
+                  ["Hawaii","Hawaii"], ["Idaho","Idaho"], ["Illinois","Illinois"], ["Indiana","Indiana"], ["Iowa","Iowa"], ["Kansas","Kansas"], 
+                  ["Kentucky","Kentucky"], ["Louisiana","Louisiana"], ["Maine","Maine"], ["Maryland","Maryland"], ["Massachusetts", "Massachusetts"],
+                  ["Michigan","Michigan"], ["Minnesota","Minnesota"], ["Mississippi","Mississippi"], ["Missouri","Missouri"], ["Montana","Montana"], ["Nebraska","Nebraska"],
+                  ["Nevada","Nevada"], ["New Hampshire","New Hampshire"], ["New Jersey","New Jersey"], ["New Mexico","New Mexico"], ["New York","New York"],
+                  ["North Carolina","North Carolina"], ["North Dakota","North Dakota"], ["Ohio","Ohio"], ["Oklahoma","Oklahoma"], ["Oregon","Oregon"],["Pennsylvania","Pennsylvania"],
+                  ["Rhode Island","Rhode Island"], ["Rhode Island","Rhode Island"], ["South Carolina","South Carolina"], ["South Dakota","South Dakota"], ["Tennessee","Tennessee"],
+                  ["Texas","Texas"], ["Utah","Utah"], ["Vermont","Vermont"], ["Virginia","Virginia"], ["Washington","Washington"], ["West Virginia","West Virginia"],
+                  ["Wisconsin","Wisconsin"], ["Wyoming","Wyoming"],], { prompt: 'Select...'}, { id: 'state', :required => false, class: 'form-control'} %>
+                   
+              </div>
+            </div>    
+            <div class="control-group">
+              <label> How can we assist you?  </label>  
+              <div class="controls">
+                <%= f.text_field :assist_you, :class => 'form-control' %>
+              </div>
+            </div>
+            <div class="form-actions">
+              <%= f.submit "Send", class: 'btn btn-info' %>
+            </div>
+          <% end %>
+
+        <!-- contact end -->
+      </div>
+    </div>
+  </div>
+</div>
+<div class="contact-bottom">
+  <div class="container">
+    <h3>Have questions? Lets&apos;s chat.</h3>
+    <p>Learn more about the manufactured home buying process by connecting with a Professional Housing Consultant near you! </p>
+    <div class="row">
+      <div class="col-md-3">
+        <center>
+        <img src="/assets/rdollar.png" class="img-responsive" align="middle">
+        <h5>PRICE</h5>
+        <!--p>Would you like more information </p-->
+        </center>
+      </div>
+      <div class="col-md-3">
+      <center>
+      <img src="/assets/rwrench.png" class="img-responsive ">
+        <h5>CONSTRUCTION</h5>
+        <!--p>Want to know more about how our homes are built?</p-->
+        </center>
+      </div>
+      <div class="col-md-3">
+      <center>
+      <img src="/assets/rappointment.png" class="img-responsive ">
+        <h5>APPOINTMENTS</h5>
+        <!--p>See our Beautiful homes in person! </p-->
+        </center>
+      </div>
+      <div class="col-md-3">
+      <center>
+      <img src="/assets/rservicenew.png" class="img-responsive ">
+        <h5>CUSTOMER SERVICE</h5>
+        <!--p>Need Help with your  new home</p-->
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

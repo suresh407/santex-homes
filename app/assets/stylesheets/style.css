@@ -12,7 +12,7 @@ h1,h2,h3,h4,h5 { font-weight:700; font-family: Arial, Helvetica, sans-serif;marg
 h1{font-size: 60px; margin-bottom: 25px;color: #72b70f;}
 h2{font-size: 35px; letter-spacing: -1px;margin-bottom: 20px;}
 h3{margin: 0 0 15px 0; font-size: 25px; font-weight: 700;}
-h3 b{font-family: 'Days One', sans-serif; font-size: 16px;,}
+h3 b{font-family: 'Days One', sans-serif; font-size: 16px;}
 h4{margin: 10px 0; font-size: 19px;}
 h5{margin: 0 0 5px 0; font-size: 17px;}
 h6{margin: 0 0 10px 0; font-size: 14px;}
@@ -307,7 +307,7 @@ and (orientation : landscape) {
 /* iPads (portrait) ----------- */
 @media only screen
 and (min-device-width : 768px)
-and(min-width: 566px;)
+and(min-width: 566px)
 and (max-device-width : 1024px)
 and (orientation : portrait) {
 /* STYLES GO HERE */
@@ -363,4 +363,5 @@ and (orientation : portrait) {
 .home-heading
 {
     font-weight: bold;
+}
 }
